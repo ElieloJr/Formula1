@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="CorridaTableViewCell" customModule="Formula1" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome do GP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cx5-Kd-rXs">
+                        <rect key="frame" x="48" y="26" width="119.5" height="25.5"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome da Pista" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xHz-PA-Nom">
+                        <rect key="frame" x="48" y="51.5" width="104" height="20"/>
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9Tw-QG-Acs">
+                        <rect key="frame" x="230" y="26" width="70" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="70" id="7nN-t8-3lM"/>
+                            <constraint firstAttribute="height" constant="40" id="iGa-iQ-56Q"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2022" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AcM-qK-BZL">
+                        <rect key="frame" x="270.5" y="67" width="29.5" height="15"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3bd-TI-SgN">
+                        <rect key="frame" x="5" y="40" width="35" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="35" id="QaV-hq-uVf"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QwX-ie-eIp">
+                        <rect key="frame" x="42" y="10" width="2" height="80"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="2" id="4Sp-Q6-tDd"/>
+                            <constraint firstAttribute="height" constant="80" id="6fX-Op-t32"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="AcM-qK-BZL" firstAttribute="top" secondItem="9Tw-QG-Acs" secondAttribute="bottom" constant="1" id="1BR-qf-rfC"/>
+                    <constraint firstItem="xHz-PA-Nom" firstAttribute="leading" secondItem="cx5-Kd-rXs" secondAttribute="leading" id="3f9-Mr-QZY"/>
+                    <constraint firstItem="3bd-TI-SgN" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="7qS-vr-Uak"/>
+                    <constraint firstItem="AcM-qK-BZL" firstAttribute="trailing" secondItem="9Tw-QG-Acs" secondAttribute="trailing" id="90S-bk-VRJ"/>
+                    <constraint firstItem="3bd-TI-SgN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="O9z-0l-8yI"/>
+                    <constraint firstAttribute="trailing" secondItem="9Tw-QG-Acs" secondAttribute="trailing" constant="20" id="PPS-8f-A56"/>
+                    <constraint firstItem="cx5-Kd-rXs" firstAttribute="leading" secondItem="QwX-ie-eIp" secondAttribute="trailing" constant="4" id="REP-dJ-9Zp"/>
+                    <constraint firstItem="9Tw-QG-Acs" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="cx5-Kd-rXs" secondAttribute="trailing" constant="10" id="TFu-m3-OfQ"/>
+                    <constraint firstItem="9Tw-QG-Acs" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="26" id="adR-2G-lTU"/>
+                    <constraint firstItem="QwX-ie-eIp" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="m5Y-fX-dtt"/>
+                    <constraint firstItem="xHz-PA-Nom" firstAttribute="top" secondItem="cx5-Kd-rXs" secondAttribute="bottom" id="mNa-tU-hR1"/>
+                    <constraint firstItem="cx5-Kd-rXs" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="26" id="pc3-Fu-PGK"/>
+                    <constraint firstItem="QwX-ie-eIp" firstAttribute="leading" secondItem="3bd-TI-SgN" secondAttribute="trailing" constant="2" id="zri-V9-406"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="bandeiraImage" destination="9Tw-QG-Acs" id="aZR-q9-DC3"/>
+                <outlet property="dataLabel" destination="AcM-qK-BZL" id="Kn8-4K-GQJ"/>
+                <outlet property="nomeGpLabel" destination="cx5-Kd-rXs" id="tbx-bx-Ich"/>
+                <outlet property="nomePistaLabel" destination="xHz-PA-Nom" id="fT5-gn-7E9"/>
+                <outlet property="numeroRoundLabel" destination="3bd-TI-SgN" id="hrJ-md-GPc"/>
+            </connections>
+            <point key="canvasLocation" x="140.57971014492756" y="124.55357142857142"/>
+        </tableViewCell>
+    </objects>
+</document>
