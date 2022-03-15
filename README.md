@@ -7,4 +7,4 @@ App para IOS para consulta de GPs por anos
 - 4# Nele vc verá seus detalhes(Data, local, pista, ranking dos pilotos)
 
 ## API utilizada:
-  ->https://ergast.com/mrd/
+    https://ergast.com/mrd/
