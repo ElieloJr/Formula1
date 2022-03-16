@@ -14,7 +14,7 @@ class ListViewModel {
     var raceList: [Race] = []
     var selectedRace: Race?
     var api: RaceAPIProtocol = RaceAPI.shared
-    var delegate: ListViewDelegate?
+    var delegate: UtilProtocolDelegate?
     
     
     func clickedCellAt(raceNumber: Int) {
@@ -29,8 +29,7 @@ class ListViewModel {
                 self.raceList = raceTable.Races
                 self.delegate?.reloadData()
             case .failure(let error):
-                self.delegate?.showError()
-                print(error)
+                self.delegate?.showError(with: "\(error)")
             }
         }
     }

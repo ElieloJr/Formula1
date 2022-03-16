@@ -34,6 +34,7 @@
 		29BB6BC427DA8CDA00B19518 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29BB6BC227DA8CDA00B19518 /* CollectionViewCell.xib */; };
 		29BB6BCD27DBB09700B19518 /* HeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BB6BCB27DBB09700B19518 /* HeaderCollectionReusableView.swift */; };
 		29BB6BCE27DBB09700B19518 /* HeaderCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29BB6BCC27DBB09700B19518 /* HeaderCollectionReusableView.xib */; };
+		29E1C14E27E2012D00153CC0 /* DetalheViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E1C14D27E2012D00153CC0 /* DetalheViewModel.swift */; };
 		8D70AB8127DFAF7E00DFD2F5 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D70AB8027DFAF7E00DFD2F5 /* ListViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +68,7 @@
 		29BB6BC227DA8CDA00B19518 /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
 		29BB6BCB27DBB09700B19518 /* HeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 		29BB6BCC27DBB09700B19518 /* HeaderCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderCollectionReusableView.xib; sourceTree = "<group>"; };
+		29E1C14D27E2012D00153CC0 /* DetalheViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalheViewModel.swift; sourceTree = "<group>"; };
 		8D70AB8027DFAF7E00DFD2F5 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -172,7 +174,6 @@
 			isa = PBXGroup;
 			children = (
 				29BB6B8727D7953E00B19518 /* Detalhes Cell */,
-				29BB6B7A27D6342F00B19518 /* DetalhesViewController.swift */,
 			);
 			path = Detalhes;
 			sourceTree = "<group>";
@@ -212,9 +213,19 @@
 			path = "Collection Header";
 			sourceTree = "<group>";
 		};
+		29E1C14C27E2004800153CC0 /* DetalheView */ = {
+			isa = PBXGroup;
+			children = (
+				29BB6B7A27D6342F00B19518 /* DetalhesViewController.swift */,
+				29E1C14D27E2012D00153CC0 /* DetalheViewModel.swift */,
+			);
+			path = DetalheView;
+			sourceTree = "<group>";
+		};
 		8D70AB7E27DFAF4B00DFD2F5 /* Sections */ = {
 			isa = PBXGroup;
 			children = (
+				29E1C14C27E2004800153CC0 /* DetalheView */,
 				8D70AB7F27DFAF5600DFD2F5 /* ListView */,
 			);
 			path = Sections;
@@ -315,6 +326,7 @@
 				29BB6B7F27D63B5600B19518 /* YearAPI.swift in Sources */,
 				29BB6B7727D2731E00B19518 /* RaceAPIResponse.swift in Sources */,
 				29BB6B9A27DA38F200B19518 /* Utils.swift in Sources */,
+				29E1C14E27E2012D00153CC0 /* DetalheViewModel.swift in Sources */,
 				8D70AB8127DFAF7E00DFD2F5 /* ListViewModel.swift in Sources */,
 				29BB6B9027D7B7ED00B19518 /* DetalheRaceAPI.swift in Sources */,
 				29BB6BCD27DBB09700B19518 /* HeaderCollectionReusableView.swift in Sources */,

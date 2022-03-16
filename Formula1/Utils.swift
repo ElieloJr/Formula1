@@ -17,6 +17,23 @@ class Utils {
         convertData.dateFormat = "dd/MM/yyyy"
         return convertData.string(from: oldDate!)
     }
+    static func filterCountry(_ country: String) -> String{
+        switch country {
+            case "United States":
+                return "usa"
+            case "Saudi Arabia":
+                return "SA"
+            case "UK":
+                return "UA"
+            case "UAE":
+                return "AE"
+            case "Russia":
+                return "RUS"
+            case "South Africa":
+                return "ZA"
+            default: return country
+        }
+    }
 //    func createSpinnerView(_ view: UIViewController) {
 //        let child = SpinnerLoadViewController()
 //

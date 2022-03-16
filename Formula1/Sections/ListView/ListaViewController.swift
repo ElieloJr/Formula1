@@ -7,27 +7,25 @@
 
 import UIKit
 
-protocol ListViewDelegate: AnyObject {
+protocol UtilProtocolDelegate: AnyObject {
     func changeScreen()
     func reloadData()
-    func showError()
+    func showError(with message: String)
 }
 
 class ListaViewController: UIViewController {
-
     let viewModel = ListViewModel()
 
-    
     @IBOutlet weak var homeCollectionView: UICollectionView!
     
     override func prepare(for segue: UIStoryboardSegue, sender: (Any)?) {
         guard let dados = segue.destination as? DetalhesViewController, let race = self.viewModel.selectedRace else { return }
-        dados.round = race.round
-        dados.nomeGP = race.raceName
-        dados.nomePista = race.Circuit.circuitName
-        dados.pais = race.Circuit.Location.country
-        dados.data = race.date
-        dados.year = self.viewModel.seasonNumber
+        dados.viewModel.round = race.round
+        dados.viewModel.nomeGP = race.raceName
+        dados.viewModel.nomePista = race.Circuit.circuitName
+        dados.viewModel.pais = race.Circuit.Location.country
+        dados.viewModel.data = race.date
+        dados.viewModel.year = self.viewModel.seasonNumber
     }
     
     override func viewDidLoad() {
@@ -42,21 +40,19 @@ class ListaViewController: UIViewController {
     }
 }
 
-extension ListaViewController: ListViewDelegate {
+extension ListaViewController: UtilProtocolDelegate {
     func changeScreen() {
         self.performSegue(withIdentifier: "DetalheRace", sender: nil)
     }
-    
     func reloadData() {
         DispatchQueue.main.async {
             self.homeCollectionView.reloadData()
         }
     }
-    func showError() {
-        //
+    func showError(with message: String) {
+        print(message)
     }
 }
-
 extension ListaViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         self.viewModel.clickedCellAt(raceNumber: indexPath.row)
@@ -66,7 +62,6 @@ extension ListaViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.viewModel.raceList.count
     }
-    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = homeCollectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as? CollectionViewCell else { fatalError() }
         cell.configure(with: self.viewModel.raceList[indexPath.row])
