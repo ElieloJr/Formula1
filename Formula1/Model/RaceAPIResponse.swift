@@ -31,9 +31,16 @@ struct RaceResult: Codable {
     let Driver: Driver
     let Constructor: Constructor
     let Time: Time?
+    let FastestLap: FastestLap?
 }
 struct Time: Codable {
     let time: String
+}
+struct FastestLap: Codable {
+    let AverageSpeed: AverageSpeed
+}
+struct AverageSpeed: Codable {
+    let speed: String
 }
 struct Driver: Codable {
     let givenName: String

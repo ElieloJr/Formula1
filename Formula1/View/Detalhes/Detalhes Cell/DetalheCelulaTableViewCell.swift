@@ -21,7 +21,8 @@ class DetalheCelulaTableViewCell: UITableViewCell {
         posicaoLabel.text = driver.position
         nomePilotoLabel.text = "\(driver.Driver.givenName) \(driver.Driver.familyName)"
         equipeLabel.text = driver.Constructor.name
-        melhorTempoLabel.text = driver.Time?.time
+        melhorTempoLabel.text = "\(driver.Time?.time ?? "----")"
+        velocidadeMediaLabel.text = "\(driver.FastestLap?.AverageSpeed.speed ?? "----") kph"
         for nat in country {
             if nat.demonym == driver.Driver.nationality {
                 if nat.demonym == "British" { origem = "GB-ENG" }
