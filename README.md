@@ -8,5 +8,3 @@ App para IOS para consulta de GPs por anos
 
 ## API utilizada:
     https://ergast.com/mrd/
-    
-![caption](https://photos.app.goo.gl/bvQnZRn88L7E48PM6)
